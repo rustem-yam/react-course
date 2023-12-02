@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Table } from "antd";
+import { ColumnsType } from "antd/es/table";
 
 function App() {
-  const [count, setCount] = useState(0)
+  interface IUser {
+    key: number;
+    id: number;
+    name: string;
+    email: string;
+  }
+
+  const columns: ColumnsType<IUser> = [
+    {
+      key: "id",
+      title: "id",
+      dataIndex: "id",
+    },
+    {
+      key: "name",
+      title: "name",
+      dataIndex: "name",
+    },
+    {
+      key: "email",
+      title: "email",
+      dataIndex: "email",
+    },
+  ];
+
+  const data: IUser[] = [
+    {
+      key: 0,
+      id: 0,
+      name: "Jack",
+      email: "example@ex.com",
+    },
+    {
+      key: 1,
+      id: 1,
+      name: "Ann",
+      email: "test@ex.com",
+    },
+    {
+      key: 2,
+      id: 2,
+      name: "George",
+      email: "hello@ex.com",
+    },
+  ];
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Table columns={columns} dataSource={data} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
