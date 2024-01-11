@@ -1,13 +1,13 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 import {
   ABOUT_ROUTE,
   CONTACTS_ROUTE,
   GAME_ROUTE,
   USERS_ROUTE,
-} from "../routes/configs";
+} from "../../routes/configs";
 
 const NavBar: React.FC = () => {
   const { isAuth, setIsAuth } = useAuth();
