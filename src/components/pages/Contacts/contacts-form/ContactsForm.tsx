@@ -14,6 +14,7 @@ const ContactsForm: FC = () => {
     reset,
   } = useForm<IContactsData>({
     mode: "onBlur",
+    reValidateMode: "onBlur",
   });
 
   const onSubmit: SubmitHandler<IContactsData> = (data) => {
