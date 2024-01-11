@@ -19,7 +19,7 @@ const Game: React.FC = () => {
       {counter < 10 ? (
         <Button onClick={handleIncrement}>Увеличить счетчик</Button>
       ) : (
-        <p>Поздравляем! Вы достигли сотни!</p>
+        <p>Поздравляем! Вы достигли десяти!</p>
       )}
     </div>
   );
