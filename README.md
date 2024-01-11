@@ -1,5 +1,7 @@
 # Ямалтдинов Рустем Илдарович 221-321
 
+# Ссылка на видео-демонстрацию: https://drive.google.com/file/d/130RTpP9Z2HdOndLf1krDn0eprnzQ6oNi/view?usp=sharing 
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
